@@ -87,7 +87,7 @@ class DWPose_Preprocessor:
         out = common_annotator_call(func, image, include_hand=detect_hand, include_face=detect_face, include_body=detect_body, image_and_json=True, resolution=resolution)
         del model
         return {
-            'ui': { "openpose_json": [json.dumps(self.openpose_dicts, indent=4)] },
+            # 'ui': { "openpose_json": [json.dumps(self.openpose_dicts, indent=4)] },
             "result": (out, self.openpose_dicts)
         }
 
@@ -142,7 +142,7 @@ class AnimalPose_Preprocessor:
         out = common_annotator_call(func, image, image_and_json=True, resolution=resolution)
         del model
         return {
-            'ui': { "openpose_json": [json.dumps(self.openpose_dicts, indent=4)] },
+            # 'ui': { "openpose_json": [json.dumps(self.openpose_dicts, indent=4)] },
             "result": (out, self.openpose_dicts)
         }
 
